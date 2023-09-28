@@ -1,0 +1,706 @@
+  <!DOCTYPE html>
+  <!--Code By Webdevtrick ( https://webdevtrick.com )-->
+  <html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Single Page Portfolio | Webdevtrick.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <style>
+  /* Code By Webdevtrick ( https://webdevtrick.com ) */
+  html, body {
+      background-color: white;
+      color:white;
+      font-family: 'Staatliches', cursive;
+      letter-spacing: 3px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; 
+  }
+  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: #ed5565;
+  }
+  h1 {
+    padding-top: 10px;
+    font-size: 10.0em;
+  }
+  h2 {
+    font-size: 3.0em;
+    color: white;
+  }
+  h3 {
+    font-size: 2.5em;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  a:hover {
+    color: #ff2a4a;
+  }
+  .banner {
+    background:url("https://webdevtrick.com/wp-content/uploads/1st.jpg");
+    background-size: cover;
+    height: 1000px;
+  }
+  #overlay {
+    background: rgba(0, 0, 0, 0.76);
+    height: 1000px;
+  }
+  .skills {
+    background:url("https://webdevtrick.com/wp-content/uploads/coding.jpg");
+    background-size: cover;
+    min-height: 100%;
+    padding-bottom: 40px;
+    padding-top:40px;
+  }
+  .ex-timeline {
+    background:url("https://webdevtrick.com/wp-content/uploads/black-background.jpg");
+    background-size: cover;
+    min-height: 100%;
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+  .portfolios {
+    padding-top: 5px;
+    margin-top: -20px;
+    background: #212121;
+  }
+  .title {
+    padding-bottom: 10px;
+    width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: 250px;
+  }
+  .titles {
+    width: 790px;
+    border-color: white;
+    border-width: 5px;
+    display: block;
+    margin:0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #title {
+    font-size: 6.5em;
+    padding-bottom: 15px;
+  }
+
+  #skills-label {
+    font-size:5.0em; 
+    padding-bottom:30px;
+  }
+  .project-img {
+    height: 500px;
+    width: 450px;
+  }
+  #projectTitle {
+    text-align: center; 
+    font-size: 2.8em;
+    cursor: pointer;
+    color: #212121;
+  }
+  .skill {
+    background-color: white;
+    color: #212121;
+    font-size: 3rem;
+    opacity: .8;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 15px;
+    position: relative;
+    display: inline-block;
+  }
+  .small-intro {
+    background: #e8eaed;
+    padding-top: 60px;
+  }
+  #small-intro {
+    text-align: center;
+    width: 50%;
+    font-size: 2em;
+    display:block;
+    margin: 0 auto;
+    color: #212121;
+    padding-bottom: 60px;
+  }
+  .well {
+    min-height: 300px;
+  }
+  .border {
+    border-style: solid;
+    border-width: 3px;
+    border-color: #ff2a4a; 
+  }
+  .resume {
+    top: 280px;
+    position: relative;
+    font-size: 70%;
+    width: 140px;
+    display: inline-block;
+    margin-left: 15px;
+    cursor: pointer; 
+    padding-bottom: 8px;
+  }
+  .contact {
+    top: 280px;
+    position: relative;
+    font-size: 70%;
+    width: 140px;
+    display: inline-block;
+    cursor: pointer; 
+    padding-bottom: 8px;
+  }
+  #qualif {
+    font-size: 3em;
+    color:#ff2a4a;
+  }
+  footer {
+    background-color: #ff2a4a;
+    color: white;
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+    text-align: center;
+  }
+  .timeline {
+    position: relative;
+    max-width: 100%;
+    list-style-type: none;
+    margin: 0 auto;
+    display: flex;
+    left: 35%;
+    padding-top: 2%;
+  }
+  .timeline:before {
+    background: #1da1f2;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    left: 10px;
+  }
+  .timeline-event {
+    position: relative;
+  }
+  .timeline-event:hover .timeline-icon {
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    background-color: #1da1f2;
+  }
+  .timeline-event:hover .timeline-thumbnail {
+    -moz-box-shadow: inset 40em 0 0 0 #ed5565;
+    -webkit-box-shadow: inset 40em 0 0 0 #ed5565;
+    box-shadow: inset 40em 0 0 0 #ed5565;
+  }
+  .timeline-event #workplace{
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+  }
+  .timeline-event:hover  #workplace{
+    color: #4f83f2;
+  }
+  .timeline-event-copy {
+    left: 50px;
+    padding: 32px 32px 0;
+    position: relative;
+    top: -32px;
+    width: 100%;
+  }
+  .timeline-event-copy p:not(.timeline-thumbnail) {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    padding-bottom: 0px;
+  }
+  .timeline-icon {
+    -moz-transition: -moz-transform 0.2s ease-in;
+    -o-transition: -o-transform 0.2s ease-in;
+    -webkit-transition: -webkit-transform 0.2s ease-in;
+    transition: transform 0.2s ease-in;
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: white;
+    outline: 10px solid #ed5565;
+    display: block;
+    margin: 8px 8px 8px -8px;
+    position: absolute;
+    top: 0;
+    left: 32px;
+    width: 16px;
+    height: 16px;
+  }
+  .timeline-thumbnail {
+    -moz-transition: box-shadow 0.5s ease-in 0.1s;
+    -o-transition: box-shadow 0.5s ease-in 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in;
+    transition: box-shadow 0.5s ease-in 0.1s;
+    -moz-box-shadow: inset 0 0 0 0em #1da1f2;
+    -webkit-box-shadow: inset 0 0 0 0em #1da1f2;
+    box-shadow: inset 0 0 0 0em #1da1f2;
+    background: none repeat scroll 0 0 #ed5565;
+    box-shadow: 0 0 0 0 #1da1f2 inset;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding: 8px 15px;
+    transition: box-shadow 0.5s ease-in 0.1s;
+  }
+  #workplace {
+    font-size: 38px;
+  }
+  #jobPos {
+    font-size: 25px;
+  }
+  #jobDesc {
+    font-size: 20px;
+    width: 50%;
+  }
+  #liveDemo {
+    text-align: center;
+    font-size: 2em;
+    cursor: pointer;
+    display: inline;
+    padding-right: 10%;
+    padding-left: 20%;
+    color: #002b80;
+  }
+  #sourceCode {
+    text-align: center;
+    font-size: 2em;
+    cursor: pointer;
+    display: inline;
+    color: #002b80;
+  }
+  .contact-section {
+    background-color: #333;
+    background-size: cover;
+    height: 350px;
+    padding-top: 20px;
+  } 
+  .contact-buttons {
+    display: block;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+    text-align: center;
+  }
+  .btn-linkedin {
+      background: #0E76A8;
+      border-radius: 10px;
+      color: #fff;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #084461;
+  }
+  .btn-drible {
+      background: #e64786;
+      border-radius: 10px;
+      color: white; 
+      border-width: 1px;
+      border-style: solid;
+      border-color: #084461;
+  }
+  .btn-github {
+      background-color: #24292e;
+      border-radius: 10px;
+      color: white; 
+      border-width: 1px;
+      border-style: solid;
+      border-color: #084461;
+  }
+  .btn-email {
+      background-color: #141f1f;
+      border-radius: 10px;
+      color: white; 
+      border-width: 1px;
+      border-style: solid;
+      border-color: #084461;
+  }
+  .btn-facebook {
+      background-color: #4267b2;
+      border-radius: 10px;
+      color: white; 
+      border-width: 1px;
+      border-style: solid;
+      border-color: #084461;
+  }
+  @media (min-width:1400px)   {
+    .banner, .skills, .ex-timeline, .portfolios, .contact-section {
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center; 
+    }
+  }
+  @media (max-width: 800px) and (min-width: 300px) {
+    img {
+      width: 30vw; 
+      height: 30vh;
+    }
+    h1 {
+      font-size: 12vw;
+    }
+    h2 {
+      font-size: 8vw;
+    }
+    h3 {
+      font-size: 6vw;
+    }
+    p {
+      font-size: 6vw;
+    }
+    .skill {
+      font-size: 5vw;
+    }
+    ul {
+      font-size: 4.5vw;
+      width: 80%;
+    }
+    #skills-label {
+      font-size: 13vw;
+    }
+    .banner {
+      background-size: 100% 100%;
+      height: 550px;
+    }
+    .title {
+      padding-bottom: 10px;
+      width: 90%;
+      top: 100px;
+    }
+    .border {
+      width: 25%;
+      border-width: 2px;
+    }
+    .resume,.contact {
+      top: 110px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .small-intro { 
+      padding-top: 40px;
+    }
+    #small-intro {
+      width: 80%;
+      font-size: 5vw;
+      padding-bottom: 40px;
+    }
+    #borderText {
+      font-size: 5.5vw;
+    }
+    #qualif {
+      font-size: 6.5vw;
+    }
+    .titles {
+      width: 85%;
+    }
+    #title {
+      padding-bottom: 15px;
+      font-size: 12vw;
+    }
+    #skills-label {
+      font-size: 10vw;
+      padding-bottom: 10px;
+    }
+    #footer {
+      font-size: 3vw;
+    }
+    .timeline {
+      left: 0;
+    }
+    .timeline-thumbnail {
+      font-size: 3.5vw;
+    }
+    .timeline:before {
+      width: 2px;
+    }
+    #workplace {
+      font-size: 8vw;
+    }
+    #jobPos {
+      font-size: 6vw;
+    }
+    #jobDesc {
+      font-size: 5vw;
+      width: 100%;
+    }
+    #liveDemo {
+      padding-left: 5%;
+      padding-right: 14%;
+      font-size: 5.5vw;
+    }
+    #sourceCode {
+      font-size: 5.5vw;
+    }
+    .view {
+      font-size: 5.5vw;
+    }
+  }
+  </style>
+  </head>
+  
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+  
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="#home" class="scroll"><span class="fa fa-home"></span> Home</a></li>
+          <li><a href="#about" class="scroll"><span class="fa fa-user"></span> About </a></li> 
+          <li><a href="#experience" class="scroll"><span class="fa fa-space-shuttle"></span> Experience</a></li>
+          <li><a href="#portfolio" class="scroll"><span class="fa fa-picture-o"></span> Portfolio</a></li>
+          <li><a href="#contact" class="scroll"><span class="fa fa-envelope"></span> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+  <!-- Section 1 -->
+    <section class="banner text-center" id="home">
+      <div id="overlay">
+        <div class="title">
+          <h1><strong> JROI ACOSTA </strong></h1>
+          <h3 id="qualif"><strong> Web Developer </strong></h3>
+        </div>
+        <div class="row text-center">
+          <!-- <div class="border contact"><a href="#"><h2 style="color: white;" id="borderText"><strong> CONTACT </strong></a></h2></div> -->
+          <!-- <div class="border resume"><h2 style="color: white;" id="borderText"><a href="#"><strong> RESUME </strong></a></h2></div> -->
+        </div>
+      </div>
+    </section>
+    
+  <!-- small-introduction --> 
+  <div class="small-intro">
+    <p id="small-intro"><strong> To apply all my knowledge and skills in Information Technology industry as I immerse myself to a working environment that would hone my capabilities which will be my tool of becoming a globally competitive and competent individual in the future.</strong></p>
+  </div>
+  
+  <!-- Skilss --> 
+    <section class="skills" id="about">
+      <div class="text-center titles border">
+        <h1 id="title"><strong> TECHNICAL SKILLS </strong></h1>  
+      </div> 
+      <h2 class="text-center" id="skills-label"><strong> Languages: </strong></h2> 
+      <div class="row text-center">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div> 
+          <div class="skill">JavaScript </div>
+          <div class="skill">PHP</div>
+          <div class="skill">.NET</div>
+          <div class="skill">Java</div>   
+      </div> 
+      <h2 class="text-center" id="skills-label"><strong> Frameworks & Libraries: </strong></h2>
+      <div class="row text-center">
+        <div class="skill">jQuery</div> 
+        <div class="skill">Laravel</div>
+        <div class="skill">React</div>
+        <div class="skill">React Native</div>
+
+      </div> 
+      <h2 class="text-center" id="skills-label"><strong> Databases: </strong></h2>
+      <div class="row text-center">
+        <div class="skill"> mySQL </div> 
+        <div class="skill"> SQL Server </div> 
+        <div class="skill"> MongoDB </div>
+        <div class="skill"> SQLite </div>
+      </div> 
+    </section>
+  
+  <!-- Experience --> 
+    <section class="ex-timeline" id="experience"> 
+      <h1 class="text-center border titles" id="title"><strong> EXPERIENCE</strong> </h1> 
+      <div class="job-timeline">
+        <ul class="timeline">
+          <li class="timeline-event">
+            <label class="timeline-icon"></label>
+            <div class="timeline-event-copy">
+              <p class="timeline-thumbnail"> June 2019 - December 2019 </p>
+              <h5 id="workplace"><a href="#" target="_blank">Freelance</a></h5>
+              <h5 id="jobPos"><strong> Game Developement </strong></h5>
+              <p id="jobDesc"> • Develop a game for thesis of my teacher client entitled <strong>"Cell Voyage"</strong>, this game focuses more on science .</p>
+            </div>
+          </li>
+        </ul>
+        <ul class="timeline">
+          <li class="timeline-event">
+            <label class="timeline-icon"></label>
+            <div class="timeline-event-copy">
+              <p class="timeline-thumbnail"> January 2020 - March 2020</p>
+              <h5 id="workplace"><a href="#" target="_blank">Freelance    </a></h5>
+              <h5 id="jobPos"><strong> Game Development </strong></h5>
+              <p id="jobDesc">• A game entitled <strong>"Computer Hardware"</strong> where in this game the user will assemble and disassemble the system unit parts and perform a operating system installation .</p>
+            </div>
+          </li>
+        </ul>
+        <ul class="timeline">
+          <li class="timeline-event">
+            <label class="timeline-icon"></label>
+            <div class="timeline-event-copy">
+              <p class="timeline-thumbnail"> 2023 </p>
+              <h5 id="workplace"><a href="#" target="_blank">Northwestern University</a></h5>
+              <h5 id="jobPos"><strong> Web Developer </strong></h5>
+              <p id="jobDesc"> • Developed a Course catalog for the university to let the students the courses offered from Freshmen to Senior Year in college. </p>
+            </div>
+          </li>
+        </ul>
+        <ul class="timeline">
+          <li class="timeline-event">
+            <label class="timeline-icon"></label>
+            <div class="timeline-event-copy">
+              <p class="timeline-thumbnail"> 2023 </p>
+              <h5 id="workplace"><a href="#" target="_blank">Jeckram Advertisement Marketing  </a></h5>
+              <h5 id="jobPos"><strong> Web Developer </strong></h5>
+              <p id="jobDesc"> • Developed a E-Learning Management System that offers different courses online. This site has api integration of different payment methods. </p>
+            </div>
+          </li>
+        </ul>
+        <ul class="timeline">
+          <li class="timeline-event">
+            <label class="timeline-icon"></label>
+            <div class="timeline-event-copy">
+              <p class="timeline-thumbnail"> July 2020 - Now</p>
+              <h5 id="workplace"><a href="#" target="_blank">PGIN</a></h5>
+              <h5 id="jobPos"><strong> Web Developer/IT Specialist </strong></h5>
+              <p id="jobDesc"> • Create and modifies existing programs. Develop Hospital Management Information System and Other system for HR Department. </p>
+            </div>
+          </li>
+        </ul>
+      </div>  
+    </section>
+    
+  <!-- Projects-->   
+    <section class="portfolios" id="portfolio">
+      <h1 class="text-center border titles" id="title"><strong> PORTFOLIO </strong></h1>
+      <div class="container">
+  
+        <div class="row">
+            <div class="col-md-6">  
+              <div class="well">
+                <a class="thumbnail">
+                  <img src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaCuZj7JDUuD88oEbUSluAlruzz7xnQYVcpwt13t1QML2XwSwenq_leMTJWCotD2_5x9TnC2-29o4cE5fAT1q2heDzawaA=s1600" class="project-img">
+                </a>
+                <h2 id="projectTitle"><strong>Cell Voyage</strong></h2>
+                <!-- <a href="https://webdevtrick.com/demos/javascript-image-slideshow/" target="_blank" alt="Live Demo"><h2 id="liveDemo"><strong>Live Demo</strong></h2></a>
+                <a href="https://webdevtrick.com/javascript-loop-slideshow/" target="_blank" alt="Source Code"><h2 id="sourceCode"><strong>Source Code</strong></h2></a> -->
+              </div>
+            </div>
+    
+            <div class="col-md-6">
+                <div class="well">
+                  <a class="thumbnail">
+                    <!-- <img src="https://webdevtrick.com/wp-content/uploads/before-and-after-image-slider-980x515.jpg" class="project-img"> -->
+                    <img src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaBaznhCb87IQYoPbGSqZ2UsGSxoaVnquyqr3Aumb_PTvzZIt9YuDxZzkwZ13clrOutUEBhxmMV2d77JKi18J2R21Bk2AQ=s1600" class="project-img">
+                  </a>
+                  <h2 id="projectTitle"><strong>Computer Hardware Game</strong></h2>
+                  <!-- <a href="https://webdevtrick.com/demos/after-before-slider/" target="_blank" alt="Live Demo"><h2 id="liveDemo"><strong>Live Demo</strong></h2></a>
+                  <a href="https://webdevtrick.com/before-and-after-image-slider/" target="_blank" alt="Source Code"><h2 id="sourceCode"><strong>Source Code</strong></h2></a> -->
+                </div>
+              </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">  
+              <div class="well">
+                <a class="thumbnail">
+                  <img src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaD0REH7vDbugj2JTLWn0WNGqcAm7ZscE3W6ZxPYyC2SWJrem2D4wutxNl-PL9JbA2_f8WS0f4v7gzNLdIVEtaHKto0q8w=s1600" class="project-img">
+                </a>
+                <h2 id="projectTitle"><strong>THE VaCamp</strong></h2>
+                <!-- <a href="https://webdevtrick.com/demos/javascript-image-slideshow/" target="_blank" alt="Live Demo"><h2 id="liveDemo"><strong>Live Demo</strong></h2></a>
+                <a href="https://webdevtrick.com/javascript-loop-slideshow/" target="_blank" alt="Source Code"><h2 id="sourceCode"><strong>Source Code</strong></h2></a> -->
+              </div>
+            </div>
+    
+            <div class="col-md-6">
+                <div class="well">
+                  <a class="thumbnail">
+                    <!-- <img src="https://webdevtrick.com/wp-content/uploads/before-and-after-image-slider-980x515.jpg" class="project-img"> -->
+                    <img src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaB32sk0XX_9I3MU_taN5cVlgQafTMzctBOx_9pwJaEPaeBBCeT7W5O4ayd5D6RdrtSMWSc67ESJCNGXYznnQdBSQOdbGw=s1600" class="project-img">
+                  </a>
+                  <h2 id="projectTitle"><strong>SMW Course</strong></h2>
+                  <!-- <a href="https://webdevtrick.com/demos/after-before-slider/" target="_blank" alt="Live Demo"><h2 id="liveDemo"><strong>Live Demo</strong></h2></a>
+                  <a href="https://webdevtrick.com/before-and-after-image-slider/" target="_blank" alt="Source Code"><h2 id="sourceCode"><strong>Source Code</strong></h2></a> -->
+                </div>
+              </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">  
+              <div class="well">
+                <a class="thumbnail">
+                  <img src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaCEARLcY4nfYHTI-nz3tfFeK_Meq36aFED6DHjPYoqJooKltjz7X98-FLUwGrTbcRRAwJhF92HK54-MawCaF9VcY-zSXQ=s1600" class="project-img">
+                </a>
+                <h2 id="projectTitle"><strong>Northwestern University Course Catalog</strong></h2>
+                <!-- <a href="https://webdevtrick.com/demos/javascript-image-slideshow/" target="_blank" alt="Live Demo"><h2 id="liveDemo"><strong>Live Demo</strong></h2></a>
+                <a href="https://webdevtrick.com/javascript-loop-slideshow/" target="_blank" alt="Source Code"><h2 id="sourceCode"><strong>Source Code</strong></h2></a> -->
+              </div>
+            </div>
+    
+            <div class="col-md-6">
+                <div class="well">
+                  <a class="thumbnail">
+                    <!-- <img src="https://webdevtrick.com/wp-content/uploads/before-and-after-image-slider-980x515.jpg" class="project-img"> -->
+                    <img src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaDKWIXYVuxhZYFKA1oh2OFFPDzLs1VX5CR13wMgt8hTcaEmT9ZDeQPbhrNMslPgXwsRXWf1IiWs1BNjjVB_zqK5E6_5cw=s1600" class="project-img">
+                  </a>
+                  <h2 id="projectTitle"><strong>Web-based Hospital Information System </strong></h2>
+                  <!-- <a href="https://webdevtrick.com/demos/after-before-slider/" target="_blank" alt="Live Demo"><h2 id="liveDemo"><strong>Live Demo</strong></h2></a>
+                  <a href="https://webdevtrick.com/before-and-after-image-slider/" target="_blank" alt="Source Code"><h2 id="sourceCode"><strong>Source Code</strong></h2></a> -->
+                </div>
+              </div>
+        </div>
+  
+    
+  
+      </div>
+    </section>
+  
+  <!-- contact -->  
+    <section class="contact-section" id="contact">
+      <h1 class="text-center">Conect With Me!</h1>
+      <div class="contact-buttons">
+        <!-- <a class="btn btn-linkedin btn-lg" href="#" target="_blank" ><i class="fa fa-2x fa-linkedin"></i></a> -->
+        <a class="btn btn-github btn-lg" href="https://github.com/jroiacosta" target="_blank"><i class="fa fa-2x fa-github"></i></a>
+        <!-- <a class="btn btn-drible btn-lg" href="#" target="_blank" ><i class="fa fa-2x fa-dribbble"></i></a> -->
+        <a class="btn btn-facebook btn-lg" href="https://facebook.com/papajroi" target="_blank"><i class="fa fa-2x fa-facebook-square"></i></a>
+      </div> 
+    </section> 
+    
+  <!-- Footer -->
+    <footer>
+      <p id="footer">Copyright © JRoi 2023</p>
+    </footer>
+  </body>
+  
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script  src="">
+  // Code By Webdevtrick ( https://webdevtrick.com ) 
+  $(document).ready(function(){ 
+    $(".scroll").click(function(event){
+      event.preventDefault();
+      $("html,body").animate({scrollTop:$(this.hash).offset().top}, 500);
+      $('.navbar-default a').removeClass('selected');
+      $(this).addClass('selected');
+    });
+
+  });
+  </script>
+  
+  </body>
+  </html>
