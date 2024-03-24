@@ -160,7 +160,7 @@ a:hover {
 }
 footer {
   background-color: white;
-  color: white;
+  color: black;
   line-height: 20px;
   padding-top: 10px;
   padding-bottom: 5px;
@@ -253,7 +253,7 @@ footer {
   -moz-box-shadow: inset 0 0 0 0em #d8d8d8;
   -webkit-box-shadow: inset 0 0 0 0em #d8d8d8;
   box-shadow: inset 0 0 0 0em #d8d8d8;
-  background: none repeat scroll 0 0 black;
+  background: none repeat scroll 0 0 #545454;
   box-shadow: 0 0 0 0 #d8d8d8 inset;
   color: #fff;
   display: inline-block;
@@ -293,7 +293,7 @@ footer {
 .contact-section {
   background-color: #333;
   background-size: cover;
-  height: 350px;
+  height: 100px;
   padding-top: 20px;
 } 
 .contact-buttons {
